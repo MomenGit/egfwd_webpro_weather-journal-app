@@ -16,6 +16,7 @@ function getDate() {
 // Add eventlisteneres
 document.getElementById("generate").addEventListener("click", generateData);
 
+// fetch data from Weather API
 const getWeatherData = async (url) => {
   const request = await fetch(url);
   try {
@@ -75,7 +76,7 @@ const postGet = async (url) => {
     })
     .then(updateUI);
 };
-
+// Async function to generate data on click event
 async function generateData() {
   let zipCode = document.getElementById("zip").value;
   console.log("Presssed");
